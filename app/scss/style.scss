@@ -222,26 +222,15 @@
     font-size: 50px;
     margin-bottom: 20px;
   }
-  &__desc {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
   &__buttons {
     display: flex;
   }
   &__link {
-    font-size: 24px;
     background-color: $dark;
-    // border: 2px solid $dark;
     color: #fff;
-    padding: 15px 30px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    box-shadow: 0px 0px 5px rgba($color: #000000, $alpha: 0.5);
     &-useful {
       background-color: $whiteLigth;
       color: #000;
-      // border: 2px solid $whiteLigth;
     }
     & + & {
       margin-left: 30px;
@@ -271,8 +260,163 @@
   @include font500;
   font-size: 20px;
 }
+.desc {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.link {
+  font-size: 24px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 2px rgba($color: #000000, $alpha: 0.3);
+  @include font500;
+}
+.title {
+  margin-bottom: 20px;
+  font-size: 42px;
+}
 
 // end poster
+
+// start about
+
+.about {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0;
+  }
+  &__info {
+    width: 50%;
+    color: #fff;
+    margin-right: 20px;
+  }
+  &__greetings {
+    color: $whiteLigth;
+  }
+  &__list {
+    margin: 30px 0;
+    font-size: 16px;
+    &-item {
+      position: relative;
+      padding-left: 35px;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -5px;
+        background-color: $whiteLigth;
+        border: 1px solid $whiteLigth;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 2px;
+        width: 7px;
+        height: 10px;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
+        transform: rotate(40deg);
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        &::before {
+          transform: rotateY(180deg);
+          background-color: transparent;
+        }
+        &:after {
+          border-bottom: 2px solid $whiteLigth;
+          border-right: 2px solid $whiteLigth;
+        }
+      }
+    }
+    &-item + &-item {
+      margin-top: 20px;
+    }
+  }
+  &__link {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid $whiteLigth;
+    &:hover {
+      background-color: $whiteLigth;
+      border: 2px solid $whiteLigth;
+      color: $dark;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 50%;
+  }
+  &__card {
+    display: flex;
+    background-color: $whiteLigth;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba($color: #fff, $alpha: 0.5);
+    transition: all 0.5s ease;
+    flex-direction: column;
+    &:nth-child(1) {
+      border-radius: 40px 0 0 0;
+    }
+    &:nth-child(2) {
+      border-radius: 0 40px 0 0;
+    }
+    &:nth-child(3) {
+      border-radius: 0 0 0 40px;
+    }
+    &:nth-child(4) {
+      border-radius: 0 0 40px 0;
+    }
+    &:hover {
+      border-radius: 0;
+      transform: translateY(-5px);
+    }
+    &-icon {
+      background-color: #fff;
+      width: 50px;
+      padding: 10px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      margin: 0 auto;
+    }
+    &-title {
+      margin-top: 20px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    &-desc {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 10px;
+      flex: 1;
+    }
+    &-more {
+      width: 130px;
+      margin: 0 auto;
+      color: #fff;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: $dark;
+        border-color: $dark;
+      }
+    }
+  }
+}
+
+// end about
 
 // end home
 
