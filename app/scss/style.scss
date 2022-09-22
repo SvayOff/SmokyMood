@@ -264,6 +264,7 @@
 .desc {
   font-size: 24px;
   margin-bottom: 20px;
+  color: #fff;
 }
 .link {
   font-size: 24px;
@@ -276,6 +277,59 @@
 .title {
   margin-bottom: 20px;
   font-size: 42px;
+  color: #fff;
+}
+.info {
+  width: 700px;
+  text-align: center;
+  padding-bottom: 60px;
+  margin: 0 auto;
+}
+
+.list {
+  margin: 30px 0;
+  font-size: 16px;
+  &-item {
+    position: relative;
+    padding-left: 35px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -5px;
+      background-color: $whiteLigth;
+      border: 1px solid $whiteLigth;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 2px;
+      width: 7px;
+      height: 10px;
+      border-bottom: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(40deg);
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      &::before {
+        transform: rotateY(180deg);
+        background-color: transparent;
+      }
+      &:after {
+        border-bottom: 2px solid $whiteLigth;
+        border-right: 2px solid $whiteLigth;
+      }
+    }
+  }
+  &-item + &-item {
+    margin-top: 20px;
+  }
 }
 
 // end poster
@@ -300,44 +354,6 @@
   &__list {
     margin: 30px 0;
     font-size: 16px;
-    &-item {
-      position: relative;
-      padding-left: 35px;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: -5px;
-        background-color: $whiteLigth;
-        border: 1px solid $whiteLigth;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        left: 9px;
-        top: 2px;
-        width: 7px;
-        height: 10px;
-        border-bottom: 2px solid #fff;
-        border-right: 2px solid #fff;
-        transform: rotate(40deg);
-        transition: all 0.5s ease;
-      }
-      &:hover {
-        &::before {
-          transform: rotateY(180deg);
-          background-color: transparent;
-        }
-        &:after {
-          border-bottom: 2px solid $whiteLigth;
-          border-right: 2px solid $whiteLigth;
-        }
-      }
-    }
     &-item + &-item {
       margin-top: 20px;
     }
@@ -448,7 +464,6 @@
     }
     &-desc {
       font-size: 24px;
-      color: #fff;
       @include font700;
     }
     &:hover {
@@ -468,18 +483,6 @@
   background-color: $brown;
   &__inner {
     padding: 120px 0;
-  }
-  &__info {
-    width: 600px;
-    text-align: center;
-    padding-bottom: 60px;
-    margin: 0 auto;
-  }
-  &__title {
-    color: #fff;
-  }
-  &__desc {
-    color: #fff;
   }
   &__cards {
     display: grid;
@@ -568,6 +571,65 @@
   }
 }
 // end services
+
+// start choose
+
+.choose {
+  &__inner {
+    padding: 120px 0;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    background-color: $dark;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    margin-bottom: 60px;
+  }
+  &__tab {
+    font-size: 24px;
+    @include font500;
+    color: $whiteLigth;
+    border-radius: 5px;
+    &.active {
+      color: #fff;
+    }
+  }
+  .tab-content {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    padding: 30px;
+    border-radius: 5px;
+    &__image {
+      background-repeat: no-repeat;
+      object-fit: cover;
+      width: 50%;
+      height: auto;
+      border-radius: 5px;
+      margin-right: 30px;
+    }
+    &__title {
+      font-size: 36px;
+    }
+    &__desc {
+      font-size: 18px;
+    }
+    &__item {
+      color: $whiteLigth;
+    }
+    &__link {
+      color: #fff;
+      border: 2px solid $whiteLigth;
+      &:hover {
+        background-color: $whiteLigth;
+        color: #202124;
+      }
+    }
+  }
+}
+
+// end choose
 
 // end home
 
