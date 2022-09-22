@@ -259,6 +259,7 @@
   margin-bottom: 20px;
   @include font500;
   font-size: 20px;
+  color: $whiteLigth;
 }
 .desc {
   font-size: 24px;
@@ -417,6 +418,156 @@
 }
 
 // end about
+
+// start counter
+
+.counter {
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 120px;
+  }
+  &__item {
+    background-color: $whiteLigth;
+    text-align: center;
+    width: 290px;
+    padding: 30px 20px;
+    box-shadow: 0px 0px 10px rgba($color: #fff, $alpha: 0.5);
+    transition: all 0.5s ease;
+    &-icon {
+      background-color: #fff;
+      width: 60px;
+      padding: 10px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      transition: all 0.5s ease;
+    }
+    &-title {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    &-desc {
+      font-size: 24px;
+      color: #fff;
+      @include font700;
+    }
+    &:hover {
+      .counter__item-icon {
+        transform: rotateY(360deg);
+        box-shadow: 0px 0px 20px rgba($color: #000, $alpha: 1);
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// end counter
+
+// start services
+.services {
+  background-color: $brown;
+  &__inner {
+    padding: 120px 0;
+  }
+  &__info {
+    width: 600px;
+    text-align: center;
+    padding-bottom: 60px;
+    margin: 0 auto;
+  }
+  &__title {
+    color: #fff;
+  }
+  &__desc {
+    color: #fff;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  &__card {
+    display: flex;
+    position: relative;
+    background-color: $whiteLigth;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba($color: #fff, $alpha: 0.5);
+    transition: all 0.5s ease;
+    flex-direction: column;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: $dark;
+      width: 100%;
+      height: 2px;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+    &-icon {
+      position: relative;
+      z-index: 2;
+      background-color: #fff;
+      width: 80px;
+      padding: 10px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      margin: 0 auto;
+      transition: all 0.5s ease;
+    }
+    &-title {
+      position: relative;
+      z-index: 2;
+      margin-top: 20px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      transition: all 0.5s ease;
+    }
+    &-desc {
+      position: relative;
+      z-index: 2;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 10px;
+      flex: 1;
+      transition: all 0.5s ease;
+    }
+    &-more {
+      position: relative;
+      z-index: 2;
+      width: 130px;
+      margin: 0 auto;
+      color: #fff;
+      padding: 10px 20px;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: $dark;
+        border-color: $whiteLigth;
+        color: $whiteLigth;
+      }
+    }
+    &:hover {
+      &::after {
+        height: 100%;
+      }
+      .services__card-icon {
+        background-color: $whiteLigth;
+        transform: rotate(360deg);
+      }
+      .services__card-title {
+        color: #fff;
+      }
+      .services__card-desc {
+        color: #fff;
+      }
+    }
+  }
+}
+// end services
 
 // end home
 
