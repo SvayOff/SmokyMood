@@ -1,3 +1,16 @@
+$(function () {
+
+  $('.testimonials__slider').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true
+  });
+
+});
+
+
 "use strict";
 
 const tabsPerent = document.querySelector('.choose__tabs'),
@@ -29,4 +42,9 @@ tabsPerent.addEventListener('click', (event) => {
     }
   });
 });
+
+// slider
+
+
+
 

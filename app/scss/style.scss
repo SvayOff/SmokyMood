@@ -285,7 +285,6 @@
   padding-bottom: 60px;
   margin: 0 auto;
 }
-
 .list {
   margin: 30px 0;
   font-size: 16px;
@@ -479,6 +478,7 @@
 // end counter
 
 // start services
+
 .services {
   background-color: $brown;
   &__inner {
@@ -570,6 +570,7 @@
     }
   }
 }
+
 // end services
 
 // start choose
@@ -754,6 +755,83 @@
 }
 
 // end team
+
+// start testimonials
+
+.testimonials {
+  &__inner {
+    padding: 120px 0;
+  }
+  &__slide {
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    width: 400px;
+    text-align: center;
+    margin: 45px 0 5px;
+    padding: 50px 20px 30px 20px;
+    &-image {
+      position: absolute;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 70px;
+      border: 1px solid $whiteLigth;
+    }
+    &-info {
+      margin-top: 10px;
+    }
+    &-desc {
+      font-size: 18px;
+      color: $whiteLigth;
+      margin-bottom: 20px;
+      line-height: 28px;
+    }
+    &-name {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    &-role {
+      color: $whiteLigth;
+      font-size: 18px;
+    }
+  }
+  .slick-track {
+    margin-left: -10px;
+    height: 100%;
+  }
+  .slick-initialized .slick-slide {
+    display: block;
+    margin-left: 20px;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    font-size: 0;
+    li + li {
+      margin-left: 10px;
+    }
+    li.slick-active {
+      button {
+        background-color: #fff;
+      }
+    }
+    button {
+      padding: 0;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $whiteLigth;
+      cursor: pointer;
+    }
+  }
+}
+
+// end testimonials
 
 // end home
 
