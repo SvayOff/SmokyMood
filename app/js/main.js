@@ -13,37 +13,24 @@ $(function () {
 
 "use strict";
 
-const tabsPerent = document.querySelector('.choose__tabs'),
-  tabs = document.querySelectorAll('.choose__tab'),
-  tabsContent = document.querySelectorAll('.choose__tab-content');
+// accordion
 
-function hideTabsContent() {
-  tabs.forEach(tab => tab.classList.remove('active'));
-  tabsContent.forEach(tabContent => tabContent.classList.add('hide'));
-}
+const accordionItems = document.querySelectorAll('.faq__accordion-item');
 
-hideTabsContent();
+for (let i = 0; i < accordionItems.length; i++) {
+  let accordionItem = accordionItems[i];
 
-function showTabsContent(i = 0) {
-  tabs[i].classList.add('active');
+  accordionItem.addEventListener('click', (e) => {
 
-  tabsContent[i].classList.remove('hide');
-  tabs.content[i].classList.add('show');
-}
-
-showTabsContent()
-
-tabsPerent.addEventListener('click', (event) => {
-  const target = event.target;
-  tabs.forEach(tab => {
-    if (target && tab === target) {
-      hideTabsContent();
-      showTabsContent(i);
+    if (e.target.getAttribute('data-accord') === accordionItem.getAttribute('data-accord')) {
+      accordionItem.classList.toggle('active');
     }
-  });
-});
 
-// slider
+  });
+}
+
+
+
 
 
 
