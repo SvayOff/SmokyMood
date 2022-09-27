@@ -1227,6 +1227,113 @@
 
 // end home
 
+// start contact us
+
+.contact {
+  &__inner {
+    padding-top: 120px;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    &-item {
+      box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+      width: 390px;
+      text-align: center;
+      padding: 40px 30px;
+      & + & {
+        margin-left: 30px;
+      }
+    }
+    &-img {
+      display: inline-block;
+      box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+      padding: 10px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      svg {
+        path {
+          fill: $whiteLigth;
+        }
+      }
+    }
+    &-title {
+      color: $whiteLigth;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    a {
+      display: block;
+      color: #fff;
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+  }
+  &__blank {
+    margin: 120px 0;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    text-align: center;
+    padding: 50px;
+    &-info {
+      padding-bottom: 10px;
+    }
+    &-desc {
+      font-size: 18px;
+      margin: 0;
+    }
+    &-form {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-input {
+      width: calc(50% - 20px);
+      padding: 15px 30px;
+      margin: 30px 10px 0px 10px;
+      font-size: 16px;
+      color: #202124;
+      @include font500;
+    }
+    &-textarea {
+      width: calc(100% - 20px);
+      height: 200px;
+      font-size: 16px;
+      margin: 30px 0 30px 10px;
+      padding: 15px 30px;
+      @include font500;
+      resize: none;
+    }
+    &-btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: transparent;
+      border-radius: 5px;
+      border: none;
+      margin: 0 auto;
+      color: #202124;
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      color: #bdbdbe;
+      border: 2px solid #bdbdbe;
+      -webkit-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      cursor: pointer;
+      &:hover {
+        background-color: rgb(189, 189, 190);
+        color: rgb(32, 33, 36);
+      }
+    }
+  }
+  &__map {
+    iframe {
+      width: 100%;
+    }
+  }
+}
+
+// end contact us
+
 // start tabs
 
 .tabs {
