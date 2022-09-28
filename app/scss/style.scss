@@ -1627,9 +1627,10 @@
 
 // end about
 
-// start login
+// start log in & sign in
 
-.login {
+.login,
+.sign {
   background-color: $brown;
   padding: 120px 0;
   &__inner {
@@ -1670,7 +1671,25 @@
   }
 }
 
-// end login
+.sign {
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    &-input {
+      width: calc(50% - 10px);
+      & + & {
+        margin: 0;
+      }
+    }
+    &-btn {
+      margin: 0 auto;
+    }
+  }
+}
+
+// end log in & sign in
 
 // start tabs
 
