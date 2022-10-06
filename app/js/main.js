@@ -40,6 +40,43 @@ for (let i = 0; i < accordionItems.length; i++) {
   });
 }
 
+// tabs
+
+const tabsPerent = document.querySelector('.choose__tabs'),
+  tabs = document.querySelectorAll('.choose__tab'),
+  tabsContent = document.querySelectorAll('.choose__tab-content');
+
+function hideTabsContent() {
+  tabsContent.forEach(tabContent => {
+    tabContent.classList.add('hide');
+    tabContent.classList.remove('show');
+  });
+
+  tabs.forEach(tab => {
+    tab.classList.remove('active');
+  });
+}
+
+hideTabsContent();
+
+function showTabsContent(i = 0) {
+  tabs[i].classList.add('active');
+  tabsContent[i].classList.add('show');
+  tabsContent[i].classList.remove('hide');
+}
+
+showTabsContent();
+
+tabsPerent.addEventListener('click', (e) => {
+  tabs.forEach((tab, i) => {
+    if (e.target && e.target == tab) {
+      hideTabsContent();
+      showTabsContent(i);
+    }
+  });
+
+});
+
 
 
 

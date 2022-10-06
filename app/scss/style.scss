@@ -706,11 +706,13 @@
       height: auto;
       opacity: 1;
       visibility: visible;
+      transition: all 0.5s ease;
     }
     &.hide {
       height: 0;
       opacity: 0;
       visibility: hidden;
+      padding: 0 30px;
     }
     &__image {
       background-repeat: no-repeat;
