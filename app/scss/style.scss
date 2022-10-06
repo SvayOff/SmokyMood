@@ -1819,14 +1819,62 @@
       font-size: 18px;
     }
   }
-  .pagination {
-    &__list {
-      justify-content: center;
+}
+
+// end staff
+
+// start reviews
+
+.reviews {
+  background-color: $brown;
+  &__inner {
+    padding: 120px 0 40px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    width: calc(50% - 30px);
+    text-align: center;
+    margin: 45px 15px 5px;
+    padding: 50px 20px 30px 20px;
+    &-image {
+      position: absolute;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 70px;
+      border: 1px solid $whiteLigth;
+    }
+    &-info {
+      margin-top: 10px;
+    }
+    &-desc {
+      font-size: 18px;
+      color: $whiteLigth;
+      margin-bottom: 20px;
+      line-height: 26px;
+    }
+    &-name {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    &-role {
+      color: $whiteLigth;
+      font-size: 18px;
     }
   }
 }
 
-// end staff
+// end reviews
 
 // start tabs
 
@@ -1891,6 +1939,7 @@
 .pagination {
   &__list {
     display: flex;
+    justify-content: center;
     padding-bottom: 120px;
   }
   &__item {
