@@ -3,6 +3,10 @@ $grey: #3c4043;
 $brown: #29292a;
 $whiteLigth: #bdbdbe;
 
+@mixin font400 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
 @mixin font500 {
   font-family: "Poppins", sans-serif;
   font-weight: 500;

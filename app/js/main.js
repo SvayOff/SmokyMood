@@ -69,7 +69,7 @@ showTabsContent();
 
 tabsPerent.addEventListener('click', (e) => {
   tabs.forEach((tab, i) => {
-    if (e.target && e.target == tab) {
+    if (e.target == tab) {
       hideTabsContent();
       showTabsContent(i);
     }
