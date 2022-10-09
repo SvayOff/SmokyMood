@@ -1994,6 +1994,197 @@
 }
 // end shop
 
+// start checkout
+
+.checkout {
+  background-color: $brown;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0;
+  }
+  &__title {
+    font-size: 24px;
+    color: #fff;
+  }
+  &__form {
+    width: calc(50% - 20px);
+    margin-right: 20px;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    padding: 30px;
+    &-list {
+    }
+    &-title {
+      display: block;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 15px;
+      margin-top: 30px;
+      &.required {
+        &::after {
+          content: "*";
+          color: rgb(194, 0, 0);
+        }
+      }
+    }
+    &-input {
+      display: block;
+      font-size: 18px;
+      padding: 20px;
+      width: 100%;
+      border-radius: 5px;
+    }
+    &-inline {
+      display: flex;
+    }
+    &-item {
+      width: 100%;
+    }
+    &-name,
+    &-email {
+      max-width: calc(100% - 15px);
+      margin-right: 15px;
+    }
+    &-surname,
+    &-phone {
+      max-width: calc(100% - 15px);
+      margin-left: 15px;
+    }
+    #checkbox_2 {
+      margin-left: 10px;
+    }
+    &-row {
+      display: inline-block;
+      margin: 30px 5px;
+    }
+    &-textarea {
+      resize: none;
+      width: 100%;
+      height: 170px;
+      padding: 20px;
+      font-size: 18px;
+      border-radius: 5px;
+    }
+  }
+  &__order {
+    max-width: calc(50% - 20px);
+    width: 100%;
+    margin-left: 20px;
+  }
+  &__invoice {
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    margin-bottom: 40px;
+  }
+  &__list {
+    margin-top: 30px;
+    border: 1px solid $whiteLigth;
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px 20px 30px;
+      & + & {
+        border-top: 1px solid $whiteLigth;
+      }
+    }
+    &-title {
+      color: #fff;
+      font-size: 18px;
+      span {
+        font-size: 14px;
+        margin-left: 2px;
+      }
+    }
+    &-name,
+    &-price {
+      font-size: 18px;
+      color: #fff;
+      @include font400;
+      span {
+        font-size: 14px;
+        margin-left: 2px;
+      }
+    }
+  }
+  &__transfer {
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
+    input {
+      display: none;
+      &:checked {
+        & + label {
+          color: $whiteLigth;
+          &:after {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      position: relative;
+      padding-left: 30px;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      &:before {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: calc(50% + 2px);
+        background-color: $dark;
+        margin-top: -10px;
+        border: 1px solid $whiteLigth;
+      }
+      &:after {
+        background-color: $whiteLigth;
+        border-radius: 50%;
+        left: 0;
+        top: calc(50% + 2px);
+        transform: scale(3.4);
+        opacity: 0;
+        margin-top: -5px;
+        width: 6px;
+        height: 6px;
+        content: "";
+        position: absolute;
+        left: 5px;
+      }
+    }
+    &-item {
+      & + & {
+        margin-top: 10px;
+      }
+    }
+    &-desc {
+      margin-top: 10px;
+      color: #fff;
+    }
+    &-place {
+      margin-top: 20px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid $whiteLigth;
+      background-color: transparent;
+      color: $whiteLigth;
+      padding: 10px;
+      cursor: pointer;
+      @include font500;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: $whiteLigth;
+        color: $dark;
+      }
+    }
+  }
+}
+
+// end checkout
+
 // start tabs
 
 .tabs {
