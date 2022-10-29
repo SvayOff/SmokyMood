@@ -104,6 +104,7 @@ function build() {
         'app/css/normalize.css',
         'app/fonts/**/*',
         'app/js/*.min.js',
+        'app/js/tabs-details.js',
         'app/*.html'
     ], { base: 'app' })
         .pipe(dest('dist'))

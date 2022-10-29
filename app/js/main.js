@@ -22,7 +22,8 @@ $(function () {
 });
 
 
-"use strict";
+
+
 
 // accordion
 
@@ -40,7 +41,8 @@ for (let i = 0; i < accordionItems.length; i++) {
   });
 }
 
-// tabs
+
+// tabs choose
 
 const tabsPerent = document.querySelector('.choose__tabs'),
   tabs = document.querySelectorAll('.choose__tab'),
@@ -68,18 +70,15 @@ function showTabsContent(i = 0) {
 showTabsContent();
 
 tabsPerent.addEventListener('click', (e) => {
-  tabs.forEach((tab, i) => {
-    if (e.target == tab) {
-      hideTabsContent();
-      showTabsContent(i);
-    }
-  });
-
+  if (e.target && e.target.classList.contains('choose__tab')) {
+    tabs.forEach((tab, i) => {
+      if (e.target == tab) {
+        hideTabsContent();
+        showTabsContent(i);
+        console.log('gfhfg');
+      }
+    });
+  }
 });
-
-
-
-
-
 
 
