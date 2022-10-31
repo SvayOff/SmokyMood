@@ -122,7 +122,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 0;
+      padding: 17px 0;
     }
     &-logo {
       position: realtive;
@@ -134,7 +134,7 @@
         content: "";
         position: absolute;
         top: 72px;
-        height: 110px;
+        height: 104px;
         width: 100%;
         margin-left: -100%;
         transform: translateX(280px);
@@ -272,6 +272,45 @@
       }
     }
   }
+
+  &__burger {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: $whiteLigth;
+    cursor: pointer;
+    transition: all 1s ease;
+    span {
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background-color: $dark;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      transition: all 0.5s ease;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        height: 3px;
+        border-radius: 10px;
+        background-color: $dark;
+        transition: all 0.5s ease;
+      }
+      &::before {
+        width: 30px;
+        top: -7px;
+      }
+      &::after {
+        width: 20px;
+        top: 7px;
+      }
+    }
+  }
 }
 
 // end header
@@ -361,7 +400,7 @@
   color: #fff;
 }
 .info {
-  width: 700px;
+  max-width: 700px;
   text-align: center;
   padding-bottom: 60px;
   margin: 0 auto;
@@ -547,6 +586,9 @@
     padding: 30px 20px;
     box-shadow: 0px 0px 10px rgba($color: #fff, $alpha: 0.5);
     transition: all 0.5s ease;
+    & + & {
+      margin-left: 30px;
+    }
     &-icon {
       background-color: #fff;
       width: 60px;
@@ -753,7 +795,6 @@
   &__box {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
   &__person {
     position: relative;
@@ -1047,6 +1088,7 @@
   &__title {
     text-align: center;
     margin: 0;
+    padding: 0 10px;
   }
   &__blank {
     box-shadow: 0px 0px 5px rgb(255 255 255 / 50%);
@@ -1100,9 +1142,8 @@
   }
   &__image {
     object-fit: cover;
-    width: 50%;
-    margin-left: 15px;
     width: calc(50% - 15px);
+    margin-left: 15px;
     border-radius: 5px;
   }
 }
@@ -1261,7 +1302,6 @@
   &__info {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     &-item {
       box-shadow: 0px 0px 10px rgb(255 255 255 / 50%);
       width: 390px;
@@ -1518,8 +1558,9 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 120px 0;
-    height: 800px;
+    height: 100%;
   }
   &__img {
     position: relative;
@@ -1641,7 +1682,7 @@
   background-color: $brown;
   padding: 120px 0;
   &__inner {
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 50px;
     box-shadow: 0px 0px 5px rgb(255 255 255 / 50%);
@@ -1710,7 +1751,7 @@
   }
   &__box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
   &__person {
@@ -2524,12 +2565,14 @@
     }
     &__row {
       display: flex;
+      align-items: center;
       color: #fff;
       padding: 15px;
       font-size: 18px;
     }
     &__title {
       width: 30%;
+      margin-right: 30px;
     }
     &__criterion {
       width: 70%;
@@ -2564,6 +2607,7 @@
     &__label {
       color: #fff;
       font-size: 18px;
+      text-transform: uppercase;
     }
     &__input {
       display: block;
@@ -2637,17 +2681,15 @@
     padding: 120px 0 60px;
   }
   &__box {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
   &__item {
     display: flex;
     flex-direction: column;
-    width: calc(33.33333% - 15px);
     box-shadow: 0px 0px 5px rgb(255 255 255 / 50%);
     transition: all 0.5s ease;
-    margin-top: 30px;
     &:hover {
       transform: translateY(-10px);
       .news__item-title {
@@ -2693,7 +2735,7 @@
     &-desc {
       font-size: 18px;
       line-height: 26px;
-      margin-bottom: 0px;
+      margin-bottom: 20px;
       overflow: hidden;
     }
     &-more {
@@ -2716,7 +2758,7 @@
 // start timer
 
 .timer {
-  margin-top: 17px;
+  margin-top: 10px;
   background-color: $grey;
   &__inner {
     display: flex;
@@ -2729,6 +2771,7 @@
     font-size: 18px;
     margin-right: 30px;
     font-style: italic;
+    line-height: 28px;
     span {
       font-size: 32px;
       position: relative;
@@ -2782,7 +2825,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: 16px;
+  margin-top: 10px;
   &::before {
     content: "";
     position: absolute;
@@ -2838,13 +2881,16 @@
 .pagination {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 120px;
   }
   &__item {
+    margin-top: 10px;
     background-color: rgba($color: $whiteLigth, $alpha: 0.9);
     padding: 10px 5px;
     width: 40px;
+    height: 40px;
     text-align: center;
     font-size: 18px;
     @include font500;
@@ -2895,7 +2941,6 @@
   .footer__inner {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     align-items: flex-start;
     padding: 120px 0;
   }
@@ -2903,9 +2948,6 @@
     width: 250px;
     & + & {
       margin-left: 40px;
-    }
-    &-main {
-      transform: translateY(-10px);
     }
     &-logo {
       position: realtive;

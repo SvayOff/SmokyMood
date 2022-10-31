@@ -5,7 +5,13 @@ $(function () {
     slidesToShow: 2,
     slidesToScroll: 1,
     arrows: false,
-    dots: true
+    dots: true,
+    responsive: [{
+      breakpoint: 601,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   });
 
 
@@ -17,12 +23,44 @@ $(function () {
     dots: false,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [{
+      breakpoint: 901,
+      settings: {
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 701,
+      settings: {
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 501,
+      settings: {
+        slidesToShow: 1
+      }
+    }]
   });
 
 });
 
+// burger
 
+const burger = document.querySelector('.header__burger');
+const menuList = document.querySelector('.header__content-list');
+const dropLinks = document.querySelectorAll('.header__content-link.drop-down');
 
+burger.addEventListener('click', (e) => {
+  burger.classList.toggle('active');
+  menuList.classList.toggle('active');
+});
+
+dropLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    link.classList.toggle('active');
+  });
+})
 
 
 // accordion
@@ -75,10 +113,11 @@ tabsPerent.addEventListener('click', (e) => {
       if (e.target == tab) {
         hideTabsContent();
         showTabsContent(i);
-        console.log('gfhfg');
       }
     });
   }
 });
+
+
 
 
