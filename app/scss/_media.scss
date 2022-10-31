@@ -13,6 +13,15 @@
   .poster__img img {
     width: 400px;
   }
+  .checkout__form-mark {
+    display: block;
+  }
+  .checkout__form #checkbox_2 {
+    margin-left: 0;
+  }
+  .checkout__form-title.checkout__form-row {
+    margin: 15px 5px;
+  }
 }
 @media (max-width: 1200px) {
   .poster__content {
@@ -348,6 +357,18 @@
   .cart__other-totals {
     margin-left: 0;
     width: 100%;
+  }
+  .checkout__inner {
+    display: block;
+  }
+  .checkout__form {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .checkout__order {
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
@@ -807,6 +828,31 @@
   .shop__inner {
     padding: 80px 0;
   }
+  .checkout__inner {
+    padding: 80px 0;
+  }
+  .checkout__form-inline {
+    display: block;
+  }
+  .checkout__form-surname,
+  .checkout__form-phone {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .checkout__form-name,
+  .checkout__form-email {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .checkout__list-title,
+  .checkout__list-name,
+  .checkout__list-price {
+    font-size: 14px;
+    text-align: center;
+  }
+  .checkout__form-title.checkout__form-row {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -940,6 +986,13 @@
   }
   .staff__person {
     height: 400px;
+  }
+  .checkout__list-item {
+    display: block;
+  }
+  .checkout__list-title,
+  .checkout__list-name {
+    margin-bottom: 10px;
   }
 }
 
