@@ -572,6 +572,11 @@
       margin-top: 70px;
     }
   }
+  .tabs__list {
+    display: block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 600px) {
@@ -753,6 +758,9 @@
   }
   .blogs__inner {
     padding: 80px 0 60px;
+  }
+  .staff__inner {
+    padding: 80px 0px 40px;
   }
   .cart {
     margin-top: 80px;
