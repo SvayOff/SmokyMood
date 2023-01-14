@@ -43,9 +43,9 @@ function images() {
 // скрипты
 function scripts() {
     return src([
-        'app/js/main.js'
+        'app/js/bundle.js'
     ])
-        .pipe(concat('main.min.js'))
+        .pipe(concat('bundle.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
         .pipe(browserSync.stream())
@@ -55,11 +55,7 @@ function scripts() {
 function ajs() {
     return src([
         'node_modules/jquery/dist/jquery.js',
-        'node_modules/mixitup/dist/mixitup.js',
         'node_modules/slick-carousel/slick/slick.js',
-        'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
@@ -84,11 +80,6 @@ function styles() {
 function aStyles() {
     return src([
         'node_modules/slick-carousel/slick/slick.css',
-        'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
-        'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
-        'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
-        'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
-
     ])
         .pipe(scss({ outputStyle: 'compressed' }))
         .pipe(concat('libs.min.css'))
@@ -103,8 +94,7 @@ function build() {
         'app/css/*.min.css',
         'app/css/normalize.css',
         'app/fonts/**/*',
-        'app/js/*.min.js',
-        'app/js/tabs-details.js',
+        'app/js/*.js',
         'app/*.html'
     ], { base: 'app' })
         .pipe(dest('dist'))
